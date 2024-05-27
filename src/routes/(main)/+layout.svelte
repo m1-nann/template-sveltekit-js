@@ -2,6 +2,9 @@
   const MENUS = [
     {label: 'home', href: '/'},
     '/dynamic-path/p1/p2',
+    '/error',
+    '/error-client',
+    '/not-found',
   ]
 </script>
 
