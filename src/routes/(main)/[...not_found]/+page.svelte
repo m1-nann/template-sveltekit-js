@@ -1,7 +1,22 @@
-<script>
-  import { page } from '$app/stores';
-</script>
+<main>
+  <h1>Page not found</h1>
+  <a href="/">Go home</a>
+</main>
 
-<h1>[...not_found]</h1>
+<style>
+  main {
+    margin-top: 40vh;
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
+  }
 
-<pre>{JSON.stringify($page,null,2)}</pre>
+  a {
+    background-color: var(--brand, #333);
+    text-decoration: none;
+    color: var(--brand-text, white);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25em;
+    cursor: pointer;
+  }
+</style>
