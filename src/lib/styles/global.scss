@@ -1,0 +1,46 @@
+@import './layout';
+@import './remove-default';
+
+:root {
+  --brand: #F7A8B7;
+  --brand-text: white;
+
+  --background-0: #080404;
+
+  --gray: #303030;
+
+  --text: #D8D8D8;
+
+  --hover: #1E1E1E;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+
+  background-color: var(--background-0);
+  color: var(--text);
+
+  margin: 0;
+}
+
+pre {
+  font-family: 'Rajdhani', sans-serif;
+  white-space: pre-wrap;
+}
+
+
+button {
+  &:hover {
+    background-color: var(--hover);
+  }
+}
+
+
+.bold {
+  font-weight: bold;
+}
+
+a {
+  color: var(--text);
+  font-weight: bold;
+}

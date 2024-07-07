@@ -1,0 +1,189 @@
+// LAYOUT
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-1 {
+  flex: 1 1 0
+}
+
+.flex-auto {
+  flex: 1 1 auto
+}
+
+.flex-initial {
+  flex: 0 1 auto
+}
+
+.flex-none {
+  flex: none
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+// Grid
+.grid-with-2-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr)
+}
+
+// Size
+.w-full {
+  width: 100%
+}
+
+.h-full {
+  height: 100%;
+}
+
+// Justify Items
+.justify-items-center {
+  justify-items: center
+}
+
+.justify-items-start {
+  justify-items: flex-start
+}
+
+.justify-items-end {
+  justify-items: flex-end
+}
+
+.justify-items-stretch {
+  justify-items: stretch
+}
+
+// Alignment
+.items-center {
+  align-items: center
+}
+
+.items-start {
+  align-items: flex-start
+}
+
+.items-end {
+  align-items: flex-end
+}
+
+.items-baseline {
+  align-items: baseline
+}
+
+.items-stretch {
+  align-items: stretch
+}
+
+// PADDING
+@each $i in 0 1 2 3 4 {
+  .gap-#{$i} {
+    gap: $i * .25rem;
+  }
+
+  .p-#{$i} {
+    padding: $i * .25rem;
+  }
+
+  .px-#{$i} {
+    padding-left: $i * .25rem;
+    padding-right: $i * .25rem;
+  }
+  .py-#{$i} {
+    padding-bottom: $i * .25rem;
+    padding-top: $i * .25rem;
+  }
+  .pt-#{$i} {
+    padding-top: $i * .25rem;
+  }
+  .pb-#{$i} {
+    padding-bottom: $i * .25rem;
+  }
+  .pl-#{$i} {
+    padding-left: $i * .25rem;
+  }
+  .pr-#{$i} {
+    padding-right: $i * .25rem;
+  }
+
+  .mx-#{$i} {
+    margin-left: $i * .25rem;
+    margin-right: $i * .25rem;
+  }
+  .my-#{$i} {
+    margin-bottom: $i * .25rem;
+    margin-top: $i * .25rem;
+  }
+  .mt-#{$i} {
+    margin-top: $i * .25rem;
+  }
+  .mb-#{$i} {
+    margin-bottom: $i * .25rem;
+  }
+  .ml-#{$i} {
+    margin-left: $i * .25rem;
+  }
+  .mr-#{$i} {
+    margin-right: $i * .25rem;
+  }
+  .m-#{$i} {
+    margin: $i * .25rem;
+  }
+
+  .rounded-#{$i} {
+    border-radius: $i * .25rem;
+  }
+
+  .top-#{$i} {
+    top: $i * .25rem;
+  }
+  .right-#{$i} {
+    right: $i * .25rem;
+  }
+  .bottom-#{$i} {
+    bottom: $i * .25rem;
+  }
+  .left-#{$i} {
+    left: $i * .25rem;
+  }
+
+}
+
