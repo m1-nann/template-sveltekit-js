@@ -5,6 +5,14 @@
 GET {{url}}/items/user_telegram
 Authorization: Bearer {{token}}
 
+### Get user
+GET {{url}}/items/user?filter[user_telegram][id][_eq]=513739291&fields=*,user_telegram.*
+Authorization: Bearer {{token}}
+
+### Get user test
+GET http://0.0.0.0:3010/items/user?filter[user_telegram][id][_eq]=513739291&fields=*,user_telegram.*
+Authorization: Bearer {{token}}
+
 ### Create item
 POST {{url}}/items/user_telegram
 Authorization: Bearer {{token}}
@@ -17,3 +25,4 @@ Content-Type: application/json
         "price": 1.5
     }
 }
+
