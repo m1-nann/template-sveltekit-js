@@ -11,7 +11,6 @@
     <div class="flex-1"/>
     <ConnectButton/>
   </div>
-
 </div>
 
 <style>

@@ -1,0 +1,5 @@
+@url=http://localhost:3011
+@url2=http://tg.pigcanfly.io
+
+### Login
+POST {{url2}}/api/tg/login

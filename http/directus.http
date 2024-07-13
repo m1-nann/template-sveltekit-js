@@ -1,0 +1,19 @@
+@url=http://0.0.0.0:3010
+@token=LpkmyU2UoGiIdrxD_iqWgWL4LPgegqF0
+
+### List items
+GET {{url}}/items/user_telegram
+Authorization: Bearer {{token}}
+
+### Create item
+POST {{url}}/items/user_telegram
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "item": {
+        "item": "item 1",
+        "quantity": 1,
+        "price": 1.5
+    }
+}

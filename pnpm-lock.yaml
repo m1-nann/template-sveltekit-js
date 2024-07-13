@@ -4,6 +4,20 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@telegram-apps/init-data-node':
+    specifier: ^1.0.2
+    version: 1.0.2
+  '@telegram-apps/sdk':
+    specifier: ^1.1.1
+    version: 1.1.1
+  ds-cardano-wallet:
+    specifier: ^0.0.1
+    version: link:../../cardano/ds-cardano-wallet
+  ds-dapp-js:
+    specifier: ^1.0.0
+    version: link:../../cardano/cardano-dart/nodejs/dapp-js
+
 devDependencies:
   '@sveltejs/adapter-node':
     specifier: ^5.0.1
@@ -601,6 +615,16 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@telegram-apps/init-data-node@1.0.2:
+    resolution: {integrity: sha512-SR1BrEkhQTArHs2zk9T/qDuiB1MFz9zzhiFF7ORqwbWq14QdZSCW37qwrV9pc//GSPx98uAstUjZHvZd4hfh1A==}
+    dependencies:
+      '@telegram-apps/sdk': 1.1.1
+    dev: false
+
+  /@telegram-apps/sdk@1.1.1:
+    resolution: {integrity: sha512-c+dbpbB9fozTGa3Ycb6zMzerAaiaRw603MvEiF2DjvkQfwsq12M3ANz3MVEhA0sdroxFns2vD2DykxcYPC+YHA==}
+    dev: false
 
   /@types/cookie@0.6.0:
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}

@@ -21,5 +21,11 @@
 		"vite": "^5.0.3",
 		"vitest": "^1.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@telegram-apps/init-data-node": "^1.0.2",
+		"@telegram-apps/sdk": "^1.1.1",
+		"ds-cardano-wallet": "^0.0.1",
+		"ds-dapp-js": "^1.0.0"
+	}
 }

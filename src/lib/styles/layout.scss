@@ -114,7 +114,7 @@
 }
 
 // PADDING
-@each $i in 0 1 2 3 4 {
+@each $i in 0 1 2 3 4 6 8 10 12 16 {
   .gap-#{$i} {
     gap: $i * .25rem;
   }
@@ -187,3 +187,7 @@
 
 }
 
+
+.border-box {
+  box-sizing: border-box;
+}

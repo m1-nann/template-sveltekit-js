@@ -22,9 +22,6 @@
   <h2>Trades: </h2>
   <div class="px-4">SELL 10000 NIKE for 0.021384 by <strong>Pig #8</strong></div>
   <div class="px-4">SELL 10000 NIKE for 0.021384 by <strong>Pig #8</strong></div>
-  <div class="px-4">SELL 10000 NIKE for 0.021384 by <strong>Pig #8</strong></div>
-  <div class="px-4">SELL 10000 NIKE for 0.021384 by <strong>Pig #8</strong></div>
-  <div class="px-4">SELL 10000 NIKE for 0.021384 by <strong>Pig #8</strong></div>
 </div>
 
 
