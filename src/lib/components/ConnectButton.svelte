@@ -12,6 +12,7 @@
   let open = false
 
   onMount(() => {
+    console.log("Mounted")
     wallets = listWallets().filter(wallet => ['nami', 'eternl', 'vespr'].includes(wallet))
   })
 </script>

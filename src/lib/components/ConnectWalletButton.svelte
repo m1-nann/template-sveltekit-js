@@ -2,8 +2,8 @@
   import {createEventDispatcher} from "svelte";
   import {connectWallet} from 'ds-cardano-wallet'
   import SimpleLoader from "$lib/loaders/SimpleLoader.svelte";
-  import {fly} from "svelte/transition";
   import {formatAda} from "$lib/utils/format.js"
+  import {Buffer} from 'buffer'
 
   export let provider
   let loading = false;
@@ -16,9 +16,8 @@
     const wallet = await connectWallet(provider)
     const walletBalance = await wallet.getBalance()
     balance = walletBalance.balance
-    const address = await wallet.getUsedAddresses()
-      .then(res => res.addresses[0])
-    await wallet.signData(address, "0")
+    const {address} = await wallet.getCurrentAddress()
+    await wallet.signText(address, 'Hello')
     dispatch('connected')
     loading = false
   }
