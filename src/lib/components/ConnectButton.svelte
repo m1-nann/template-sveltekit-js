@@ -5,17 +5,20 @@
   import FullscreenPopup from "$lib/layout/FullscreenPopup.svelte";
   import SimpleLoader from "$lib/loaders/SimpleLoader.svelte";
   import ConnectWalletButton from "$lib/components/ConnectWalletButton.svelte";
+  import {wallet, updateWallet} from '$lib/stores/wallet'
 
   /**@type {string[]}*/
   let wallets = []
+  let selectedWallet = undefined
 
   let open = false
 
   onMount(() => {
-    console.log("Mounted")
     wallets = listWallets().filter(wallet => ['nami', 'eternl', 'vespr'].includes(wallet))
   })
 </script>
+
+<div></div>
 
 <button class="flex items-center gap-1 p-2"
         on:click={() => open = true}>
@@ -30,6 +33,10 @@
     <div class="flex gap-2">
       {#each wallets as wallet}
         <ConnectWalletButton
+            on:connected={() => {
+              updateWallet(wallet)
+              open = false
+            }}
             provider={wallet}
         />
       {/each}

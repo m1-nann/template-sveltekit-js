@@ -1,5 +1,13 @@
 <script>
   import Header from "$lib/layout/Header.svelte";
+  import {onMount} from "svelte";
+  import {loadWalletFromLocalStorage} from "$lib/stores/wallet.js";
+
+  console.log('loyout')
+  onMount(() =>{
+    console.log('Mount')
+    loadWalletFromLocalStorage()
+  })
 
 </script>
 

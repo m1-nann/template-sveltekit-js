@@ -1,0 +1,1 @@
+export const NIKE = 'c881c20e49dbaca3ff6cef365969354150983230c39520b917f5cf7c4e696b65'

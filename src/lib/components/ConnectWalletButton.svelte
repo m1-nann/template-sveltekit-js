@@ -15,10 +15,15 @@
     loading = true
     const wallet = await connectWallet(provider)
     const walletBalance = await wallet.getBalance()
-    balance = walletBalance.balance
-    const {address} = await wallet.getCurrentAddress()
-    await wallet.signText(address, 'Hello')
     dispatch('connected')
+    loading = false
+  }
+  async function verify(){
+    loading = true
+    const wallet = await connectWallet(provider)
+    const {address} = await wallet.getCurrentAddress()
+    await wallet.signText(address, 'Sign to verify your wallet')
+    dispatch('verified')
     loading = false
   }
 </script>

@@ -1,9 +1,9 @@
 <script>
   import {onMount} from "svelte";
   import {browser} from "$app/environment";
+  import {updateUser, user} from '$lib/stores/user.js'
 
   let tgData;
-  let user;
 
   function retrieveLaunchParamsFromWindow(){
     const initDataRaw = window.Telegram?.WebApp?.initData
@@ -20,11 +20,12 @@
       },
       body: JSON.stringify({initDataRaw, initData})
     })
-    user = await res.json()
+    data = await res.json()
+    updateUser(data)
   }
 
   onMount(() => {
-    if (browser){
+    if (browser && $user.userId === -1){
       // tgData = retrieveLaunchParams();
       tgData = retrieveLaunchParamsFromWindow();
       login()
@@ -34,4 +35,4 @@
 
 <button on:click={login}>Login</button>
 <div>{tgData != null ? "TG Data loaded" : "Loading ..."}</div>
-<pre>{JSON.stringify(user,null,2)}</pre>
+<pre>{JSON.stringify($user,null,2)}</pre>
